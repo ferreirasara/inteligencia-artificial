@@ -35,7 +35,7 @@ A estratégia da pesquisa em largura é expandir primeiro todos os nós de menor
 A estratégia da pesquisa em profundidade, ao contrário da pesquisa em largura, é expandir sempre o nó mais profundo da árvore. O algoritmo de busca em profundidade não encontra necessariamente a solução mais próxima, mas pode ser mais eficiente se o problema possui um grade número de soluções ou se a maioria dos caminhos pode levar a uma solução.
 
 \subsubsection{Pesquisa em profundidade limitada}
-É muito semelhante à busca em profundidade, mas é definido um limite te profundidade, ou seja, o algoritmo faz a pesquisa somente até certo ponto.
+É muito semelhante à busca em profundidade, mas é definido um limite de profundidade, ou seja, o algoritmo faz a pesquisa somente até certo ponto.
 
 \subsection{Busca com informação}
 Utiliza conhecimento específico além da definição do problema para encontrar soluções de forma mais eficiente do que a busca cega. Utiliza-se uma função de avaliação, para definir o quão desejável é cada nó, e então escolher o nó mais desejável, que ainda não foi expandido.~\cite{inteligencia-artificial}
@@ -82,7 +82,7 @@ Cada ação terá custo igual a 1(um).
 Cubo com as cores organizadas.
 
 \subsubsection{Estratégia escolhida}
-Para resolver o cubo mágico, pode-se usar a estratégia A Estrela, pois, em alguns casos, será necessário "bagunçar" algumas peças que já haviam sido organizadas, para organizar as outras.
+Para resolver o cubo mágico, pode-se usar a estratégia A*, pois, em alguns casos, será necessário optar por um caminho pior, bagunçando algumas peças que já haviam sido organizadas, para organizar as outras, e o algoritmo A* se sai melhor nesse caso.
 
 \subsection{Missionários e canibais}
 Três canibais e três missionários estão viajando juntos e chegam à margem de um rio. Eles desejam atravessar para a outra margem para, desta forma, continuar a viagem. O único meio de transporte disponível é um barco que comporta no máximo duas pessoas. Há uma outra dificuldade: em nenhum momento o número de canibais pode ser superior ao número de missionários pois desta forma os missionários estariam em grande perigo de vida.
@@ -103,7 +103,7 @@ Cada ação terá custo igual a 1(um).
 Três canibais e três missionários, do outro lado do rio.
 
 \subsubsection{Estratégia escolhida}
-
+Pode ser resolvido com a busca em largura, o que garantirá o menor caminho até a solução.
 
 \subsection{Problema das n rainhas}
 O problema das oito rainhas é o problema matemático de dispor oito rainhas em um tabuleiro de xadrez de dimensão 8x8, de forma que nenhuma delas seja atacada por outra. Para tanto, é necessário que duas damas quaisquer não estejam numa mesma linha, coluna, ou diagonal. Este é um caso específico do Problema das n rainhas, no qual temos n rainhas e um tabuleiro com n x n casas(para qualquer n >= 4).
@@ -124,6 +124,7 @@ Cada ação terá custo igual a 1(um).
 Tabuleiro com n rainhas, nenhuma atacando outra.
 
 \subsubsection{Estratégia escolhida}
+Pode ser resolvido com pesquisa em profundidade, pois esse problema pode apresentar muitas soluções, e a busca em profundidade pode ser mais eficiente com problemas assim.
 
 \subsection{Sudoku}
 O Sudoku é um quebra-cabeça baseado na colocação lógica de números. O objetivo do jogo é a colocação de números de 1 a 9 em cada uma das células vazias numa grade de 9x9, constituída por 3x3 sub-grades chamadas regiões. O quebra-cabeça contém algumas pistas iniciais, que são números inseridos em algumas células, de maneira a permitir uma indução ou dedução dos números em células que estejam vazias. Cada coluna, linha e região só pode ter um número de cada um dos 1 a 9.
@@ -149,8 +150,10 @@ Cada ação terá custo igual a 1(um).
 Grade com todas as células preenchidas corretamente, com nenhum número repetido na linha, coluna ou sub-grade.
 
 \subsubsection{Estratégia escolhida}
+Pode ser utilizada a busca gulosa. Apesar de não garantir a solução ótima, o sudoku será resolvido sem maiores complicações, principalmente se for um sudoku de nível mais fácil. Para um sudoku de nível difícil, a solução poderá demorar mais para ser encontrada, visto que existirá mais "tentativas e erros".
 
 \section{Considerações finais}
+Este trabalho foi muito importante para meu conhecimento e aprofundamento dos temas abordados, além de ter-me permitido aperfeiçoar competências de investigação, seleção e organização da informação.
 
 \bibliographystyle{acm}
 \bibliography{referencias}
